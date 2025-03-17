@@ -178,7 +178,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <!-- [DETAIL] -->
-<!-- [DET-je detail?] -->
 document.addEventListener('DOMContentLoaded', function() {
   var isProductDetail = false;
 
