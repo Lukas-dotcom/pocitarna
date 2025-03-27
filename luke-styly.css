@@ -44,16 +44,16 @@ body[fv-customer-status="b2b"] .flags.flags-extra {
 
 
 /* Zobrazit štítky Výprodej (v admin režimu) */
-body.admin-logged .flag.flag-vyprodej,
-body.admin-logged .flag.flag-custom1,
-body.admin-logged .flag.flag-sale {
+body.admin-logged .product .flag.flag-vyprodej,
+body.admin-logged .product .flag.flag-custom1,
+body.admin-logged .product .flag.flag-sale {
   display: flex !important;
 }
 
-/* Zvýraznit produkty, které obsahují jakýkoli štítek Výprodej */
 body.admin-logged .product:has(.flag.flag-vyprodej),
 body.admin-logged .product:has(.flag.flag-custom1),
 body.admin-logged .product:has(.flag.flag-sale) {
   background: rgba(255, 255, 0, 0.25);
 }
+
 
