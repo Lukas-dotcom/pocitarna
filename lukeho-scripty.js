@@ -2,8 +2,8 @@
 
 
 
-<!-- [KOŠÍK] -->
-<!-- [K-přidání textu změnit zemi můžete v předešlém kroku a změna nadpisu zpět na Fakturační adresa] -->
+/*[KOŠÍK]*/
+/*[K-přidání textu změnit zemi můžete v předešlém kroku a změna nadpisu zpět na Fakturační adresa]*/
 document.addEventListener("DOMContentLoaded", function() {
   // Ověříme, zda je cesta URL přesně "/objednavka/krok-2/"
   if (window.location.pathname === '/objednavka/krok-2/') {
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-<!-- [K-přidání upozornění na vyšší DPH v košíku] -->
+/*[K-přidání upozornění na vyšší DPH v košíku]*/
 document.addEventListener('DOMContentLoaded', function() {
     // Zkontrolujte, zda aktuální URL obsahuje '/objednavka/krok-1/'
     if (window.location.pathname.includes('/objednavka/krok-1/')) {
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<!-- [DETAIL] -->
+/*[DETAIL]*/
 document.addEventListener('DOMContentLoaded', function() {
   var isProductDetail = false;
 
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-<!-- [DET-Skrytí prázdného dlouhého popisu] -->
+/*[DET-Skrytí prázdného dlouhého popisu]*/
   if (isProductDetail) {
     var descriptionParagraph = document.querySelector('.basic-description p');
     if (descriptionParagraph && descriptionParagraph.textContent.trim() === 'Popis produktu není dostupný') {
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-<!-- [DET-změna tooltipu dostupnosti u variantních produktů z krátkého popisku] -->
+/*[DET-změna tooltipu dostupnosti u variantních produktů z krátkého popisku]*/
   if (isProductDetail) {
     // Najde element s novým tooltipem
     const upgradeTooltip = document.querySelector('.dtv-tooltip.acronym.fast-tip__text.variant-tooltip');
@@ -229,8 +229,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<!-- [KATEGORIE] -->
-<!-- [KAT+VYHL změna tooltipu dostupnosti u variantních produktů z krátkého popisku] -->
+/*[KATEGORIE]*/
+/*[KAT+VYHL změna tooltipu dostupnosti u variantních produktů z krátkého popisku]*/
 // Funkce pro úpravu tooltipů v kategoriích
 function applyCategoryTooltips() {
     const productCards = document.querySelectorAll('#products .product');
@@ -278,7 +278,7 @@ window.addEventListener("load", function() {
     setTimeout(applySearchTooltips, 2000);
 });
 
-<!-- [KAT zvýraznění výprodejových] -->
+/* [KAT zvýraznění výprodejových]
 function applyVyprodejHighlights() {
   // 1. Zobrazit .flag-vyprodej
   document.querySelectorAll(".flag.flag-vyprodej").forEach(el => {
@@ -324,4 +324,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   } else {
   }
-});
+});*/
