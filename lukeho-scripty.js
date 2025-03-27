@@ -296,7 +296,6 @@ function applyVyprodejHighlights() {
   document.querySelectorAll(".product").forEach(card => {
     const vyprodejFlag = card.querySelector(".flag.flag-vyprodej, .flag.flag-custom1");
     if (vyprodejFlag && vyprodejFlag.textContent.trim().toLowerCase().includes("výprodej")) {
-      console.log("🎯 Výprodej nalezen v kartě:", card);
       card.style.background = "rgba(255, 255, 0, 0.25)";
     }
   });
