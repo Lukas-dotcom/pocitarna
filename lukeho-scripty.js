@@ -277,3 +277,29 @@ document.addEventListener('ShoptetDOMPageContentLoaded', applyCategoryTooltips);
 window.addEventListener("load", function() {
     setTimeout(applySearchTooltips, 2000);
 });
+
+//zvýraznění výprodej jen pro některé adminy
+document.addEventListener("DOMContentLoaded", function () {
+  const body = document.body;
+
+  if (!body.classList.contains("admin-logged")) return;
+
+  fetch("https://raw.githubusercontent.com/Lukas-dotcom/sova/main/sova-setting.json")
+    .then(response => response.json())
+    .then(data => {
+      const allowedNames = data?.FEzvyrazneniVyprodej?.rules?.map(item => item.jmena) || [];
+
+      // hledáme jméno kdekoliv v .admin-bar
+      const adminBarText = document.querySelector('.admin-bar')?.innerText || '';
+
+      // pokusíme se najít shodu
+      const matchedName = allowedNames.find(name => adminBarText.includes(name));
+
+      if (matchedName) {
+        body.classList.add("vyprodej-zvyrazneni-show");
+      } else {
+      }
+    })
+    .catch(err => {
+    });
+});

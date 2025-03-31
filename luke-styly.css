@@ -11,6 +11,18 @@ body[fv-customer-status="b2b"] .flags.flags-extra {
   display: none;
 }
 
+/*Zborazení výprodej pro vybrané adminy*/
+
+body.vyprodej-zvyrazneni-show .product .flag.flag-vyprodej,
+body.vyprodej-zvyrazneni-show .product.lb-product .flag.flag-custom1 {
+  display: flex !important;
+}
+
+body.vyprodej-zvyrazneni-show .product:has(.flag.flag-vyprodej),
+body.vyprodej-zvyrazneni-show .product.lb-product:has(.flag.flag-custom1) {
+  background: rgba(255, 255, 0, 0.25);
+}
+
 
 /* [KOŠÍK]*/
 
@@ -43,15 +55,5 @@ body[fv-customer-status="b2b"] .flags.flags-extra {
 }
 
 
-/* Zobrazit štítky Výprodej (v admin režimu) */
-body.admin-logged .product .flag.flag-vyprodej,
-body.admin-logged .product.lb-product .flag.flag-custom1 {
-  display: flex !important;
-}
-
-body.admin-logged .product:has(.flag.flag-vyprodej),
-body.admin-logged .product.lb-product:has(.flag.flag-custom1) {
-  background: rgba(255, 255, 0, 0.25);
-}
 
 
