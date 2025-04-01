@@ -1,24 +1,36 @@
-.siteCookies__form {
-    container-type: inline-size;
+@supports (container-type: inline-size) {
+    .siteCookies__form {
+        container-type: inline-size;
+        padding: 1.25rem .9375rem 1px .9375rem !important;
+    }
 }
 
 @container (min-width: 560px) {
-    
+
+
+
     .siteCookies__links {
-        height: 30px !important;
+        height: 15px !important;
     }
 
     .siteCookies__links .siteCookies__link.js-cookies-settings {
-        position: relative !important;
-        top: 21px !important;
+        position: absolute !important;
+        top: 122px !important;
         border: none !important;
         text-decoration:underline;
-        left:45px
+        left:60px
     }
+
+    .siteCookies__link:link{
+        width: 120px !important;
+        height: 40px !important;
+    }
+
+
 
     .siteCookies__buttonWrap {
         right: 35px !important;
-        top: 152px !important;
+        top: 130px !important;
         position: absolute !important;
         display: flex;
         gap: 35px !important;
@@ -28,15 +40,22 @@
 width: 260px;
 }
     
+.siteCookies__text {
+    margin-bottom: 0px !important;
+}
+
+
+
+
      .siteCookies__buttonWrap .siteCookies__button{
     height: 50px !important;
 }
     
      .siteCookies__buttonWrap .siteCookies__button[value="reject"] {
-    width: 130px;
+    width: 136px;
     background:none !important;
     color:white !important;
-    border: solid 1px;
+    border: 1px solid !important;
     }
 }
 
@@ -45,26 +64,37 @@ width: 260px;
     .siteCookies__links .siteCookies__link.js-cookies-settings {
         border: none !important;
         text-decoration:underline;
-        bottom: 30px;
+        height: 40px;
+        display: inline;
+        width: auto;
+        position: static !important;
+        display: inline;
     }
 
-		.siteCookies.siteCookies--bottom.siteCookies--dark.js-siteCookies .siteCookies__form {
-    padding: 1.25rem .9375rem 3.1rem .9375rem !important;
-		}
+    .siteCookies__links {
+        width: auto;
+        margin: 0 auto;
+    }
 
 
 
     .siteCookies__buttonWrap {
     display: flex;
-    flex-direction: column-reverse;
-    margin-top: 25px;
+    flex-direction: column;
+    margin-top: 10px;
     margin-bottom:20px !important;
+    top: 50%;
+    left: 50%;
+    gap: 15px !important;
+
     
     }
      .siteCookies__buttonWrap .siteCookies__button[value="reject"] {
     background:none !important;
     color:white !important;
-    border: solid 1px;
-    height:35px !important;
+    border:1px solid;
+    height:50px !important;
     }
+
+
 }
