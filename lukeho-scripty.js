@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!body.classList.contains("admin-logged")) return;
 
-  fetch("https://raw.githubusercontent.com/Lukas-dotcom/sova/main/sova-setting.json")
+  fetch("https://raw.githubusercontent.com/Lukas-dotcom/sova/main/BE-sova-settings.json")
     .then(response => response.json())
     .then(data => {
       const allowedNames = data?.FEzvyrazneniVyprodej?.rules?.map(item => item.jmena) || [];
