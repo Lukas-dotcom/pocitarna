@@ -54,6 +54,109 @@ body.vyprodej-zvyrazneni-show .product.lb-product:has(.flag.flag-custom1) {
   }
 }
 
+/* ===== Layout wrapper (GRID) ===== */
+.sova-article-wrapper {
+  display: grid !important;                /* přebije inline display:flex */
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Obsah článku – kritické pro "100%" chování uvnitř */
+.sova-article-content {
+  min-width: 0;
+}
+.sova-article-content * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Sticky sidebar */
+.sova-article-sidebar {
+  position: sticky;
+  top: 20px;
+  width: 280px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+}
+
+/* Headline šířka (ponechávám) */
+h1[itemprop="headline"][data-testid="textArticleTitle"] {
+  display: block;
+  max-width: 1040px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* ===== Bannery ===== */
+.sova-article-sidebar-banner-wrapper {
+  overflow: hidden;
+  border-radius: 5px;
+}
+.sova-article-sidebar-banner {
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+.sova-article-sidebar-banner:hover { transform: scale(1.05); }
+.sova-article-sidebar-banner img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+/* ===== Tlačítka v sidebaru (budoucí použití) ===== */
+.sova-article-sidebar-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sova-article-sidebar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #00aba7;
+  border-radius: 5px;
+  background-color: #00aba7;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: normal !important;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  transition: background-color 0.3s, color 0.3s;
+}
+.sova-article-sidebar-button img {
+  flex: 0 0 auto;
+  width: 24px;
+  height: auto;
+  margin-right: 8px;
+}
+.sova-article-sidebar-button span {
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 1.4;
+  white-space: normal !important;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.sova-article-sidebar-button:hover { background-color: #008a87; color: #fff; }
+
+/* ===== Responsivity ===== */
+@media (max-width: 1400px) {
+  .sova-article-wrapper {
+    display: block !important;              /* obsah přes celou šířku */
+  }
+  .sova-article-sidebar {
+    display: none;
+  }
+}
+
 
 
 
