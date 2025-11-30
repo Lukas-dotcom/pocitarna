@@ -6,7 +6,8 @@ body[fv-customer-status="b2b"] .flags.flags-extra {
 }
 
 /*skrytí výprodejového štítku všude - skrývá se aby se mohl scriptem zobrazovat pro adminy*/
-.flag.flag-vyprodej{
+.flag.flag-vyprodej,
+.flag.flag-custom1{
   display: none;
 }
 
@@ -155,6 +156,7 @@ h1[itemprop="headline"][data-testid="textArticleTitle"] {
     display: none;
   }
 }
+
 
 
 
