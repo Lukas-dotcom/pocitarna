@@ -22,7 +22,7 @@ body.vyprodej-zvyrazneni-show .product.lb-product:has(.flag.flag-custom1) {
   background: rgba(255, 255, 0, 0.25);
 }
 
-/*ad hoc úprav štítku masakr cen
+/*ad hoc úprav štítku masakr cen*/
 span.flag.flag-masakr-cen {
     background-color: #f9eb58 !important;
     border: 2px solid #772813 !important;
@@ -195,6 +195,7 @@ h1[itemprop="headline"][data-testid="textArticleTitle"] {
     color: #fff;
     text-decoration: none !important;;
   }
+
 
 
 
